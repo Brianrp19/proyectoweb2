@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buscar Aventones - Aventones</title>
+  <link rel="stylesheet" href="SearchHomeR.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header class="main-header">
+      <img src="Imagenes/Logo.png" alt="Logo Aventones" class="logo-header" />
+      <div class="header-box">
+        <div class="header-content">
+          <nav class="nav-bar">
+            <a href="SearchHome.html" class="active">Home</a>
+            <a href="RidesR.html">Rides</a>
+            <a href="Bookings.html">Bookings</a>
+          </nav>
+          <div class="search-user">
+            <input type="text" placeholder="Search..." class="search-bar" />
+            <div class="user-dropdown">
+              <label tabindex="0">
+                <img src="Imagenes/LogoPersona.png" alt="User Icon" class="user-icon" />
+              </label>
+              <div class="dropdown-menu">
+                <a href="index.html">Logout</a>
+                <a href="Profile.html">Profile</a>
+                <a href="Settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="content-body">
+        <h2 class="title">Search rides</h2>
+        <hr class="divider" />
+
+        <div class="search-box">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="from">From</label>
+              <div class="select-wrapper">
+                <select id="from" name="from" form="searchForm">
+                  <option disabled selected>Quesada</option>
+                  <option>Quesada</option>
+                  <option>San José</option>
+                  <option>Heredia</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="to">To</label>
+              <div class="select-wrapper">
+                <select id="to" name="to" form="searchForm">
+                  <option disabled selected>Zarcero</option>
+                  <option>Zarcero</option>
+                  <option>Alajuela</option>
+                  <option>Cartago</option>
+                </select>
+              </div>
+            </div>
+
+            <form id="searchForm" action="SearchHomeR.html" method="GET">
+              <button type="submit" class="btn-search">Find rides</button>
+            </form>
+          </div>
+
+          <div class="days-row">
+            <span class="days-label">Days</span>
+            <label><input type="checkbox" name="days" value="Mon" form="searchForm"> Mon</label>
+            <label><input type="checkbox" name="days" value="Tue" form="searchForm"> Tue</label>
+            <label><input type="checkbox" name="days" value="Wed" form="searchForm"> Wed</label>
+            <label><input type="checkbox" name="days" value="Thu" form="searchForm"> Thu</label>
+            <label><input type="checkbox" name="days" value="Fri" form="searchForm"> Fri</label>
+            <label><input type="checkbox" name="days" value="Sat" form="searchForm"> Sat</label>
+            <label><input type="checkbox" name="days" value="Sun" form="searchForm"> Sun</label>
+          </div>
+        </div>
+
+        <p class="result-title">Rides found from <strong>Quesada</strong> to <strong>Zarcero</strong></p>
+
+        <table class="rides-table">
+          <thead>
+            <tr>
+              <th>Driver</th>
+              <th>From</th>
+              <th>To</th>
+              <th>Seats</th>
+              <th>Car</th>
+              <th>Fee</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="driver-cell driver-barroyo">
+                  <img src="Imagenes/LogoPersona.png" alt="Driver Icon" class="driver-icon" />
+                  barroyo
+                </div>
+              </td>
+              <td>Quesada</td>
+              <td>Alajuela</td>
+              <td>2</td>
+              <td>Nissan Pathfinder 2015</td>
+              <td>$5</td>
+              <td><a href="VerRide.html" class="link-text">Request</a></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="driver-cell driver-barroyo">
+                  <img src="Imagenes/LogoPersona.png" alt="Driver Icon" class="driver-icon" />
+                  barroyo
+                </div>
+              </td>
+              <td>Quesada</td>
+              <td>Naranjo</td>
+              <td>1</td>
+              <td>Toyota Corolla 2020</td>
+              <td>$10</td>
+              <td><a href="VerRide.html" class="link-text">Request</a></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="driver-cell driver-yluna">
+                  <img src="Imagenes/LogoPersona.png" alt="Driver Icon" class="driver-icon" />
+                  yluna
+                </div>
+              </td>
+              <td>Aguas Zarcas</td>
+              <td>Naranjo</td>
+              <td>1</td>
+              <td>Ford Festiva 1990</td>
+              <td>-</td>
+              <td><a href="VerRide.html" class="link-text">Request</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="map-section">
+          <iframe 
+            class="map-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d62757.98741364473!2d-84.47720298763566!3d10.355211892893727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x8fa02e5f4c3b8299%3A0xbf44ec6d9a1f529a!2sQuesada!3m2!1d10.3318054!2d-84.4296805!4m5!1s0x8fa0780c3097d7c9%3A0x929ebaa38f162788!2sZarcero!3m2!1d10.3166667!2d-84.4166667!5e0!3m2!1ses-419!2scr!4v1718999999999!5m2!1ses-419!2scr"
+            width="100%" 
+            height="350" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <nav class="footer-nav">
+        <a href="SearchHome.html" class="active">Home</a> |
+        <a href="RidesR.html">Rides</a> |
+        <a href="Bookings.html">Bookings</a> |
+        <a href="Settings.html">Settings</a> |
+        <a href="index.html">Login</a> |
+        <a href="Register.html">Register</a>
+      </nav>
+      <p class="footer-copy">© Aventones.com</p>
+    </footer>
+  </div>
+</body>
+</html>

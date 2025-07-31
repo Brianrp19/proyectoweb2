@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edit Profile - Aventones</title>
+  <link rel="stylesheet" href="Profile.css" />
+</head>
+<body>
+  <div class="wrapper">
+   
+    <header class="main-header">
+      <img src="Imagenes/Logo.png" alt="Logo Aventones" class="logo-header" />
+      <div class="header-box">
+        <div class="header-content">
+          <nav class="nav-bar">
+            <a href="SearchHome.html" class="active">Home</a>
+            <a href="RidesR.html">Rides</a>
+            <a href="Bookings.html">Bookings</a>
+          </nav>
+          <div class="search-user">
+            <input type="text" placeholder="Search..." class="search-bar" />
+            <div class="user-dropdown">
+              <label tabindex="0">
+                <img src="Imagenes/LogoPersona.png" alt="User Icon" class="user-icon" />
+              </label>
+              <div class="dropdown-menu">
+                <a href="index.html">Logout</a>
+                <a href="Profile.html">Profile</a>
+                <a href="Settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <main class="container">
+      <div class="register-wrapper">
+        <h2 class="title">Edit Profile</h2>
+
+        <form class="register-form" action="SearchHome.html" method="GET">
+          <div class="input-row">
+            <div class="field">
+              <label>First Name</label>
+              <input type="text" name="firstName" required />
+            </div>
+            <div class="field">
+              <label>Last Name</label>
+              <input type="text" name="lastName" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" required />
+          </div>
+
+          <div class="input-row">
+            <div class="field">
+              <label>Password</label>
+              <input type="password" name="password" required />
+            </div>
+            <div class="field">
+              <label>Repeat Password</label>
+              <input type="password" name="repeatPassword" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Address</label>
+            <input type="text" name="address" />
+          </div>
+
+          <div class="input-row">
+            <div class="field">
+              <label>Country</label>
+              <select name="country" required>
+                <option value="Costa Rica" selected>Costa Rica</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>State</label>
+              <input type="text" name="state" />
+            </div>
+          </div>
+
+          <div class="input-row">
+            <div class="field">
+              <label>City</label>
+              <input type="text" name="city" />
+            </div>
+            <div class="field">
+              <label>Phone Number</label>
+              <input type="text" name="phone" />
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <a href="SearchHome.html" class="cancel-link">Cancel</a>
+            <button type="submit" class="btn-register">Save</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+ 
+    <footer class="footer">
+      <nav class="footer-nav">
+        <a href="SearchHome.html">Home</a> |
+        <a href="RidesR.html">Rides</a> |
+        <a href="Bookings.html">Bookings</a> |
+        <a href="Settings.html">Settings</a> |
+        <a href="index.html">Login</a> |
+        <a href="Register.html">Register</a>
+      </nav>
+      <p class="footer-copy">© Aventones.com</p>
+    </footer>
+  </div>
+</body>
+</html>

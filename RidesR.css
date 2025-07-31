@@ -1,0 +1,133 @@
+@import url('SearchHome.css');
+
+
+.title {
+  font-size: 32px;
+  font-weight: normal;
+  margin: 20px 0 10px;
+  color: #777;
+}
+
+.divider {
+  width: 140px;
+  margin: 0 auto 20px;
+  border: 0;
+  border-top: 1px solid #aaa;
+}
+
+.btn-container {
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.btn-new-ride {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: #1a73e8;
+  color: white;
+  border: 1px solid #222;
+  font-weight: bold;
+  border-radius: 0; 
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-new-ride:hover {
+  background-color: #0c64d3;
+}
+
+.rides-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.rides-table th,
+.rides-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.rides-table th {
+  background-color: #f4f4f4;
+}
+
+
+.rides-table td:first-child {
+  color: #1a73e8;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: normal; 
+}
+
+.link-text {
+  color: #1a73e8;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: normal; 
+}
+
+.link-text:hover {
+  text-decoration: none;
+}
+
+.user-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  outline: none; 
+}
+
+
+.user-dropdown > label {
+  cursor: pointer;
+  display: inline-flex;
+}
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; 
+  right: 0;
+  background-color: white; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 140px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  z-index: 1000;
+  flex-direction: column;
+}
+
+
+.dropdown-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: normal;
+  display: block;
+  transition: background-color 0.2s ease;
+}
+
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+  background-color: #1a73e8;
+  color: white;
+  outline: none;
+}
+
+
+.user-dropdown:focus-within .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.user-dropdown:focus-within {
+  outline: none;
+}

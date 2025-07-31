@@ -1,0 +1,178 @@
+@import url('SearchHome.css');
+
+
+.title {
+  font-size: 32px;
+  font-weight: normal;
+  margin: 20px 0 10px;
+  color: #777;
+  text-align: center;
+}
+
+.divider {
+  width: 140px;
+  margin: 0 auto 20px;
+  border: 0;
+  border-top: 1px solid #aaa;
+}
+
+
+.config-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.field {
+  margin-bottom: 24px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+  font-size: 14px;
+  text-align: left;
+}
+
+.field input[type="text"],
+.field textarea {
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  resize: vertical;
+}
+
+
+.input-small {
+  width: 50%;
+  display: block;
+  margin-left: 0;
+  padding-left: 8px;
+}
+
+
+textarea {
+  width: 100%;
+  display: block;
+  margin: 0;
+  resize: vertical;
+}
+
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cancel-link {
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.cancel-link:hover {
+  text-decoration: underline;
+}
+
+.btn-save {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.btn-save:hover {
+  background-color: #3367d6;
+}
+
+
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 12px;
+}
+
+.user-dropdown label {
+  cursor: pointer;
+  display: inline-block;
+  width: 60px;
+  height: 40px;
+  position: relative;
+}
+
+.user-icon {
+  width: 60px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: contain;
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  min-width: 160px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.user-dropdown:hover .dropdown-menu,
+.user-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+
+.footer {
+  text-align: center;
+  padding: 25px 10px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #9b9999;
+  border-top: 1px solid #ccc;
+}
+
+.footer-nav {
+  margin-bottom: 8px;
+  padding: 10px;
+}
+
+.footer-nav a {
+  color: #838383;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  color: #666666;
+  font-size: 14px;
+}

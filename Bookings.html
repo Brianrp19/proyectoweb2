@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bookings - Aventones</title>
+  <link rel="stylesheet" href="Bookings.css" />
+</head>
+<body>
+  <div class="wrapper">
+   
+    <header class="main-header">
+      <img src="Imagenes/Logo.png" alt="Logo Aventones" class="logo-header" />
+      <div class="header-box">
+        <div class="header-content">
+          <nav class="nav-bar">
+            <a href="SearchHome.html">Home</a>
+            <a href="RidesR.html">Rides</a>
+            <a href="Bookings.html" class="active">Bookings</a>
+          </nav>
+          <div class="search-user">
+            <input type="text" placeholder="Search..." class="search-bar" />
+            <div class="user-dropdown">
+              <label tabindex="0">
+                <img src="Imagenes/LogoPersona.png" alt="User Icon" class="user-icon" />
+              </label>
+              <div class="dropdown-menu">
+                <a href="index.html">Logout</a>
+                <a href="Settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <main class="container">
+      <div class="content-body">
+        <h2 class="title">Bookings</h2>
+        <hr class="divider" />
+
+        <table class="rides-table">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Ride</th>
+              <th>Accept / Reject</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="Imagenes/LogoPersona.png" alt="User" class="user-avatar" /> fulano</td>
+              <td>Ciudad Quesada - Naranjo</td>
+              <td>
+                <a href="#" class="link-accept">Accept</a> |
+                <a href="#" class="link-reject">Reject</a>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="Imagenes/LogoPersona.png" alt="User" class="user-avatar" /> yluna</td>
+              <td>Fortuna - San José</td>
+              <td>
+                <a href="#" class="link-accept">Accept</a> |
+                <a href="#" class="link-reject">Reject</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+ 
+    <footer class="footer">
+      <nav class="footer-nav">
+        <a href="SearchHome.html">Home</a> |
+        <a href="RidesR.html">Rides</a> |
+        <a href="Bookings.html" class="active">Bookings</a> |
+        <a href="Settings.html">Settings</a> |
+        <a href="index.html">Login</a> |
+        <a href="Register.html">Register</a>
+      </nav>
+      <p class="footer-copy">© Aventones.com</p>
+    </footer>
+  </div>
+</body>
+</html>

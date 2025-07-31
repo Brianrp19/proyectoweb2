@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AVENTONES</title>
+  <link rel="stylesheet" href="styleLg.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="login-wrapper">
+      <img src="Imagenes/Logo.png" alt="Logo Aventones" />
+
+      <img src="Imagenes/LogoGoogle.png" alt="Google logo" />
+
+      <p class="separator-text">Or</p>
+
+      <form class="formulario-login" action="SearchHome.html" method="GET">
+        <div class="campo">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" class="input-field" required />
+        </div>
+
+        <div class="campo">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" class="input-field" required />
+        </div>
+
+        <p class="register-text">Not an user? <a href="Register.html">Register Now</a></p>
+
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <hr />
+    <nav class="footer-nav">
+      <a href="SearchHome.html">Home</a> |
+      <a href="RidesR.html">Rides</a> |
+      <a href="Bookings.html">Bookings</a> |
+      <a href="Settings.html">Settings</a> |
+      <a href="index.html" class="active">Login</a> |
+      <a href="Register.html">Register</a>
+    </nav>
+    <p class="footer-copy">© Aventones.com</p>
+  </footer>
+</body>
+</html>

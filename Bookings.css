@@ -1,0 +1,148 @@
+@import url('SearchHome.css');
+
+
+.title {
+  font-size: 32px;
+  font-weight: normal;
+  margin: 20px 0 10px;
+  color: #777;
+}
+
+.divider {
+  width: 140px;
+  margin: 0 auto 20px;
+  border: 0;
+  border-top: 1px solid #aaa;
+}
+
+
+.rides-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.rides-table th,
+.rides-table td {
+  border: 1px solid #ccc;
+  padding: 20px 12px; 
+  text-align: center;
+  vertical-align: middle;
+}
+
+.rides-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+
+.link-accept {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-reject {
+  color: #1a73e8; 
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-accept:hover,
+.link-reject:hover {
+  text-decoration: underline;
+}
+
+
+.footer {
+  text-align: center;
+  padding: 25px 10px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #9b9999;
+  border-top: 1px solid #ccc;
+}
+
+.footer-nav {
+  margin-bottom: 8px;
+  padding: 10px;
+}
+
+.footer-nav a {
+  color: #838383;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  color: #666666;
+  font-size: 14px;
+}
+
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 12px;
+}
+
+
+.user-dropdown label {
+  cursor: pointer;
+  display: inline-block;
+  width: 60px;   
+  height: 40px;  
+  position: relative;
+}
+
+
+.user-icon {
+  width: 60px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: contain;
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 45px; 
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  min-width: 160px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.user-dropdown:hover .dropdown-menu,
+.user-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}

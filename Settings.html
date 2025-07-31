@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Settings - Aventones</title>
+  <link rel="stylesheet" href="Settings.css" />
+</head>
+<body>
+  <div class="wrapper">
+
+    <header class="main-header">
+      <img src="Imagenes/Logo.png" alt="Logo Aventones" class="logo-header" />
+      <div class="header-box">
+        <div class="header-content">
+          <nav class="nav-bar">
+            <a href="SearchHome.html" class="active">Home</a>
+            <a href="RidesR.html">Rides</a>
+            <a href="Bookings.html">Bookings</a>
+          </nav>
+          <div class="search-user">
+            <input type="text" placeholder="Search..." class="search-bar" />
+            <div class="user-dropdown">
+              <label tabindex="0">
+                <img src="Imagenes/LogoPersona.png" alt="User Icon" class="user-icon" />
+              </label>
+              <div class="dropdown-menu">
+                <a href="index.html">Logout</a>
+                <a href="Profile.html">Profile</a>
+                <a href="Settings.html" class="active">Settings</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <main class="container">
+      <div class="content-body">
+        <h2 class="title">Configuration</h2>
+        <hr class="divider" />
+
+        <form class="config-form" action="SearchHome.html" method="GET">
+          <div class="field">
+            <label for="publicName">Public Name</label>
+            <input type="text" id="publicName" class="input-small" name="publicName" />
+          </div>
+
+          <div class="field">
+            <label for="publicBio">Public Bio</label>
+            <textarea id="publicBio" rows="5" name="publicBio"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <a href="SearchHome.html" class="cancel-link">Cancel</a>
+            <button type="submit" class="btn-save">Save</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+ 
+    <footer class="footer">
+      <nav class="footer-nav">
+        <a href="SearchHome.html">Home</a> |
+        <a href="RidesR.html">Rides</a> |
+        <a href="Bookings.html">Bookings</a> |
+        <a href="Settings.html" class="active">Settings</a> |
+        <a href="index.html">Login</a> |
+        <a href="Register.html">Register</a>
+      </nav>
+      <p class="footer-copy">© Aventones.com</p>
+    </footer>
+  </div>
+</body>
+</html>
