@@ -1,2 +1,2 @@
-# Proyecto Web 1
+# Proyecto Web 2
 AL iniciar llevara al login, el cual tambien puede acceder al register, en la pantalla home al darle find rides cargan datis,  Al darle al find rides en search rides cargan los datos y de ahi se le da a request y lleva a la pagina de Ride details, en rides se le da a new rides o edit en la tabla para esos apartados, el apartado de bookings queda normal, en la parte de foto de usuario arriba a la par del search esta el submenu para el logout, settings o profile. todo el footer es funcional de igual manera 
