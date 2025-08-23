@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>New Ride - Aventones</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="NewRide.css" />
 </head>
 <body>
@@ -14,7 +15,7 @@
         <div class="header-content">
           <nav class="nav-bar">
             <a href="SearchHome.html">Home</a>
-            <a href="RidesR.html" class="active">Rides</a>
+           <a href="RidesR.html" id="nav-rides">Rides</a>
             <a href="Bookings.html">Bookings</a>
           </nav>
           <div class="search-user">
@@ -41,32 +42,32 @@
           <div class="input-row">
             <div class="field">
               <label>Departure from</label>
-              <input type="text" />
+              <input type="text" id="from" />
             </div>
             <div class="field">
               <label>Arrive To</label>
-              <input type="text" />
+              <input type="text" id="to" />
             </div>
           </div>
 
-     <div class="days-section">
-  <span class="days-title">Days</span>
-  <div class="days-checkbox">
-    <label><input type="checkbox" /> Mon</label>
-    <label><input type="checkbox" /> Tue</label>
-    <label><input type="checkbox" /> Wed</label>
-    <label><input type="checkbox" /> Thu</label>
-    <label><input type="checkbox" /> Fri</label>
-    <label><input type="checkbox" /> Sat</label>
-    <label><input type="checkbox" /> Sun</label>
-  </div>
-</div>
+          <div class="days-section">
+            <span class="days-title">Days</span>
+            <div class="days-checkbox">
+              <label><input type="checkbox" name="days" value="Mon" /> Mon</label>
+              <label><input type="checkbox" name="days" value="Tue" /> Tue</label>
+              <label><input type="checkbox" name="days" value="Wed" /> Wed</label>
+              <label><input type="checkbox" name="days" value="Thu" /> Thu</label>
+              <label><input type="checkbox" name="days" value="Fri" /> Fri</label>
+              <label><input type="checkbox" name="days" value="Sat" /> Sat</label>
+              <label><input type="checkbox" name="days" value="Sun" /> Sun</label>
+            </div>
+          </div>
 
           <div class="input-row">
             <div class="field mini-select">
               <label>Time</label>
               <div class="select-wrapper make-time-arrow">
-                <select>
+                <select id="time">
                   <option>8:00 am</option>
                   <option>10:00 am</option>
                   <option>12:00 pm</option>
@@ -76,7 +77,7 @@
             <div class="field mini-select">
               <label>Seats</label>
               <div class="select-wrapper double-arrow">
-                <select>
+                <select id="seats">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -86,7 +87,7 @@
             <div class="field mini-select">
               <label>Fee</label>
               <div class="select-wrapper double-arrow">
-                <select>
+                <select id="fee">
                   <option>5</option>
                   <option>10</option>
                   <option>15</option>
@@ -101,7 +102,7 @@
               <div class="field">
                 <label>Make</label>
                 <div class="select-wrapper make-time-arrow">
-                  <select>
+                  <select id="make">
                     <option>Nissan</option>
                     <option>Hyundai</option>
                     <option>Toyota</option>
@@ -110,12 +111,12 @@
               </div>
               <div class="field">
                 <label>Model</label>
-                <input type="text" placeholder="Car Model" />
+                <input type="text" id="model" placeholder="Car Model" />
               </div>
               <div class="field mini-select">
                 <label>Year</label>
                 <div class="select-wrapper double-arrow">
-                  <select>
+                  <select id="year">
                     <option>2020</option>
                     <option>2021</option>
                     <option>2022</option>
@@ -127,23 +128,31 @@
 
           <div class="actions">
             <a href="RidesR.html" class="cancel-link">Cancel</a>
-         <button type="button" class="btn-create" onclick="location.href='RidesR.html'">Create</button>
+            <button type="button" class="btn-create">Create</button>
           </div>
         </form>
       </div>
     </main>
 
-    <footer class="footer">
-      <nav class="footer-nav">
-        <a href="SearchHome.html">Home</a> |
-        <a href="RidesR.html" class="active">Rides</a> |
-        <a href="Bookings.html">Bookings</a> |
-        <a href="Settings.html">Settings</a> |
-        <a href="index.html">Login</a> |
-        <a href="Register.html">Register</a>
-      </nav>
-      <p class="footer-copy">© Aventones.com</p>
-    </footer>
+ 
+<footer class="footer text-center mt-4">
+  <nav class="footer-nav mb-2">
+    <a href="SearchHome.html">Home</a> |
+    <span id="footer-rides-wrapper">
+      <a href="RidesR.html" id="footer-rides">Rides</a> |
+    </span>
+    <a href="Bookings.html" class="active">Bookings</a> |
+    <a href="Settings.html">Settings</a> |
+    <a href="index.html">Login</a> |
+    <a href="Register.html">Register</a>
+  </nav>
+  <p class="footer-copy">© Aventones.com</p>
+</footer>
+
+
   </div>
+
+  
+ <script src="js/newRide.js"></script>
 </body>
 </html>

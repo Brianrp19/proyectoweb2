@@ -10,10 +10,9 @@
   <main class="container">
     <div class="register-wrapper">
       <img src="Imagenes/Logo.png" alt="Logo Aventones" class="logo" />
-
       <h2 class="title">User Registration</h2>
 
-      <form class="register-form" action="index.html" method="GET">
+      <form class="register-form" id="registerForm" novalidate>
         <div class="input-row">
           <div class="field">
             <label for="firstName">First Name</label>
@@ -50,7 +49,7 @@
           <div class="field">
             <label for="country">Country</label>
             <select id="country" name="country" required>
-              <option selected disabled></option>
+              <option selected disabled value="">Selecciona</option>
               <option value="CR">Costa Rica</option>
               <option value="MX">México</option>
               <option value="US">Estados Unidos</option>
@@ -74,8 +73,7 @@
         </div>
 
         <div class="link-row">
-          <span>Already an user? <a href="index.html">Login here</a></span>
-          <span>Register as driver? <a href="#">Click here</a></span>
+          <span>Already a user? <a href="index.html">Login here</a></span>
         </div>
 
         <button type="submit" class="btn-register">Sign up</button>
@@ -85,15 +83,23 @@
 
   <footer class="footer">
     <hr />
-    <nav class="footer-nav">
-      <a href="SearchHome.html">Home</a> |
-      <a href="RidesR.html">Rides</a> |
-      <a href="Bookings.html">Bookings</a> |
-      <a href="Settings.html">Settings</a> |
-      <a href="index.html">Login</a> |
-      <a href="Register.html" class="active">Register</a>
-    </nav>
-    <p class="footer-copy">© Aventones.com</p>
-  </footer>
+<footer class="footer text-center mt-4">
+  <nav class="footer-nav mb-2">
+    <a href="SearchHome.html">Home</a> |
+    <span id="footer-rides-wrapper">
+      <a href="RidesR.html" id="footer-rides">Rides</a> |
+    </span>
+    <a href="Bookings.html" class="active">Bookings</a> |
+    <a href="Settings.html">Settings</a> |
+    <a href="index.html">Login</a> |
+    <a href="Register.html">Register</a>
+  </nav>
+  <p class="footer-copy">© Aventones.com</p>
+</footer>
+
+
+
+
+  <script src="js/register.js"></script>
 </body>
 </html>

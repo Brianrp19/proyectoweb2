@@ -4,21 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Edit Profile - Aventones</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="Profile.css" />
 </head>
 <body>
   <div class="wrapper">
-   
     <header class="main-header">
       <img src="Imagenes/Logo.png" alt="Logo Aventones" class="logo-header" />
       <div class="header-box">
-        <div class="header-content">
-          <nav class="nav-bar">
+        <div class="header-content d-flex flex-wrap justify-content-between align-items-center">
+          <nav class="nav-bar d-flex gap-2 flex-wrap">
             <a href="SearchHome.html" class="active">Home</a>
-            <a href="RidesR.html">Rides</a>
+            <a href="RidesR.html" id="nav-rides">Rides</a>
             <a href="Bookings.html">Bookings</a>
           </nav>
-          <div class="search-user">
+          <div class="search-user d-flex gap-2 align-items-center mt-2 mt-md-0">
             <input type="text" placeholder="Search..." class="search-bar" />
             <div class="user-dropdown">
               <label tabindex="0">
@@ -35,71 +35,117 @@
       </div>
     </header>
 
-
     <main class="container">
       <div class="register-wrapper">
         <h2 class="title">Edit Profile</h2>
 
-        <form class="register-form" action="SearchHome.html" method="GET">
+        <form id="profileForm" class="register-form" novalidate>
+          <!-- Campos comunes -->
           <div class="input-row">
             <div class="field">
-              <label>First Name</label>
-              <input type="text" name="firstName" required />
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required />
             </div>
             <div class="field">
-              <label>Last Name</label>
-              <input type="text" name="lastName" required />
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required />
             </div>
           </div>
 
           <div class="field">
-            <label>Email</label>
-            <input type="email" name="email" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
           </div>
 
           <div class="input-row">
             <div class="field">
-              <label>Password</label>
-              <input type="password" name="password" required />
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
             </div>
             <div class="field">
-              <label>Repeat Password</label>
-              <input type="password" name="repeatPassword" required />
+              <label for="repeatPassword">Repeat Password</label>
+              <input type="password" id="repeatPassword" name="repeatPassword" required />
             </div>
           </div>
 
-          <div class="field">
-            <label>Address</label>
-            <input type="text" name="address" />
+          <!-- Campos exclusivos para usuarios normales -->
+          <div id="userFields" style="display:none;">
+            <div class="field">
+              <label for="address">Address</label>
+              <input type="text" id="address" name="address" />
+            </div>
+
+            <div class="input-row">
+              <div class="field">
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                  <option value="CR">Costa Rica</option>
+                  <option value="MX">México</option>
+                  <option value="US">Estados Unidos</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" />
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="field">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" />
+              </div>
+              <div class="field">
+                <label for="phoneUser">Phone Number</label>
+                <input type="text" id="phoneUser" name="phone" />
+              </div>
+            </div>
           </div>
 
-          <div class="input-row">
-            <div class="field">
-              <label>Country</label>
-              <select name="country" required>
-                <option value="Costa Rica" selected>Costa Rica</option>
-                <option value="Mexico">Mexico</option>
-                <option value="Estados Unidos">Estados Unidos</option>
-              </select>
+          <!-- Campos exclusivos para drivers -->
+          <div id="driverFields" style="display:none;">
+            <div class="input-row">
+              <div class="field">
+                <label for="cedula">Cédula</label>
+                <input type="text" id="cedula" name="cedula" />
+              </div>
+              <div class="field">
+                <label for="birthDate">Fecha de Nacimiento</label>
+                <input type="date" id="birthDate" name="birthDate" />
+              </div>
             </div>
-            <div class="field">
-              <label>State</label>
-              <input type="text" name="state" />
+
+            <div class="input-row">
+              <div class="field">
+                <label for="carMake">Marca del Vehículo</label>
+                <input type="text" id="carMake" name="carMake" />
+              </div>
+              <div class="field">
+                <label for="carModel">Modelo</label>
+                <input type="text" id="carModel" name="carModel" />
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="field">
+                <label for="carYear">Año</label>
+                <input type="number" id="carYear" name="carYear" />
+              </div>
+              <div class="field">
+                <label for="licensePlate">Número de Placa</label>
+                <input type="text" id="licensePlate" name="licensePlate" />
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="field">
+                <label for="phoneDriver">Phone Number</label>
+                <input type="text" id="phoneDriver" name="phone" />
+              </div>
             </div>
           </div>
 
-          <div class="input-row">
-            <div class="field">
-              <label>City</label>
-              <input type="text" name="city" />
-            </div>
-            <div class="field">
-              <label>Phone Number</label>
-              <input type="text" name="phone" />
-            </div>
-          </div>
-
-          <div class="form-actions">
+          <div class="form-actions mt-3">
             <a href="SearchHome.html" class="cancel-link">Cancel</a>
             <button type="submit" class="btn-register">Save</button>
           </div>
@@ -107,12 +153,13 @@
       </div>
     </main>
 
- 
-    <footer class="footer">
-      <nav class="footer-nav">
+    <footer class="footer text-center mt-4">
+      <nav class="footer-nav mb-2">
         <a href="SearchHome.html">Home</a> |
-        <a href="RidesR.html">Rides</a> |
-        <a href="Bookings.html">Bookings</a> |
+        <span id="footer-rides-wrapper">
+          <a href="RidesR.html" id="footer-rides">Rides</a> |
+        </span>
+        <a href="Bookings.html" class="active">Bookings</a> |
         <a href="Settings.html">Settings</a> |
         <a href="index.html">Login</a> |
         <a href="Register.html">Register</a>
@@ -120,5 +167,7 @@
       <p class="footer-copy">© Aventones.com</p>
     </footer>
   </div>
+
+  <script src="js/profile.js"></script>
 </body>
 </html>

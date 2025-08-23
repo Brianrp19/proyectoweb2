@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -102,7 +101,6 @@ body {
   display: block;
 }
 
-
 .user-dropdown {
   position: relative;
   display: inline-block;
@@ -147,7 +145,6 @@ body {
   background-color: #f0f0f0;
 }
 
-
 .title {
   font-size: 28px;
   margin-bottom: 30px;
@@ -159,7 +156,6 @@ body {
   margin-right: auto;
   font-weight: normal;
 }
-
 
 .ride-form {
   display: flex;
@@ -221,11 +217,9 @@ body {
   margin-bottom: 20px;
 }
 
-
 .mini-select {
   max-width: 100px;
 }
-
 
 .select-wrapper {
   position: relative;
@@ -260,12 +254,7 @@ body {
 }
 
 .select-wrapper.double-arrow {
-  background-image:
-    linear-gradient(to right,
-      transparent 70%,
-      #dcdcdc 70%,
-      #dcdcdc 71%,
-      #f0f0f0 71%);
+  background-image: linear-gradient(to right, transparent 70%, #dcdcdc 70%, #dcdcdc 71%, #f0f0f0 71%);
 }
 
 .select-wrapper.double-arrow::after {
@@ -350,11 +339,12 @@ body {
   color: #666666;
   font-size: 14px;
 }
+
 .days-section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 70px; 
+  margin-left: 70px;
   margin-bottom: 20px;
 }
 
@@ -369,4 +359,166 @@ body {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .header-content {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .nav-bar {
+    width: 100% !important;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .nav-bar a {
+    flex: none;
+    padding: 6px 12px;
+    font-size: 15px;
+    line-height: 1.2;
+  }
+
+  .search-user {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    width: 70%;
+    max-width: 300px;
+  }
+
+  .days-section {
+    margin-left: 0;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px 10px;
+  }
+
+  .nav-bar {
+    width: 100% !important;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .nav-bar a {
+    flex: none;
+    padding: 5px 8px;
+    font-size: 13px;
+  }
+
+  .search-user {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-bar {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .user-icon {
+    width: 50px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 430px) {
+  .ride-wrapper {
+    padding: 20px 15px;
+  }
+
+  .input-row {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .field {
+    min-width: 100%;
+  }
+
+  .mini-select {
+    max-width: 100%;
+  }
+
+  .select-wrapper select {
+    font-size: 15px;
+    padding: 10px 35px 10px 12px;
+  }
+
+  .days-section {
+    margin-left: 0;
+    align-items: flex-start;
+    padding: 0 10px;
+  }
+
+  .days-checkbox {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .btn-create {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+  }
+
+  .cancel-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .footer-nav a {
+    margin: 0;
+  }
+
+  .title {
+    font-size: 22px;
+    max-width: 100%;
+  }
+
+  label, .days-title {
+    font-size: 13px;
+  }
+
+  input, select {
+    font-size: 14px;
+  }
+
+  .logo-header {
+    width: 220px;
+  }
+}
+
+.hidden-by-role {
+  display: none !important;
 }

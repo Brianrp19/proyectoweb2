@@ -176,3 +176,6 @@ textarea {
   color: #666666;
   font-size: 14px;
 }
+.hidden-by-role {
+  display: none !important;
+}

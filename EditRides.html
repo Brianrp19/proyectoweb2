@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Edit Ride - Aventones</title>
   <link rel="stylesheet" href="EditRides.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
   <div class="wrapper">
@@ -14,7 +15,7 @@
         <div class="header-content">
           <nav class="nav-bar">
             <a href="SearchHome.html">Home</a>
-            <a href="RidesR.html" class="active">Rides</a>
+         <a href="RidesR.html" id="nav-rides">Rides</a>
             <a href="Bookings.html">Bookings</a>
           </nav>
           <div class="search-user user-dropdown" tabindex="0">
@@ -36,52 +37,59 @@
       <div class="ride-wrapper">
         <h2 class="title">Edit Ride</h2>
         <form class="ride-form">
-          <div class="input-row">
-            <div class="field">
-              <label>Departure from</label>
-              <input type="text" value="Quesada" />
+          <!-- Primer row: Departure & Arrive -->
+          <div class="row g-3 justify-content-center">
+            <div class="field col-12 col-md-6">
+              <label for="from">Departure from</label>
+              <input type="text" id="from" class="form-control" />
             </div>
-            <div class="field">
-              <label>Arrive To</label>
-              <input type="text" value="Zarcero" />
+            <div class="field col-12 col-md-6">
+              <label for="to">Arrive To</label>
+              <input type="text" id="to" class="form-control" />
             </div>
           </div>
 
-               <div class="days-section">
-  <span class="days-title">Days</span>
-  <div class="days-checkbox">
-    <label><input type="checkbox" /> Mon</label>
-    <label><input type="checkbox" /> Tue</label>
-    <label><input type="checkbox" /> Wed</label>
-    <label><input type="checkbox" /> Thu</label>
-    <label><input type="checkbox" /> Fri</label>
-    <label><input type="checkbox" /> Sat</label>
-    <label><input type="checkbox" /> Sun</label>
-  </div>
-</div>
+          <div class="days-section">
+            <span class="days-title">Days</span>
+            <div class="days-checkbox">
+              <label><input type="checkbox" name="days" value="Mon" /> Mon</label>
+              <label><input type="checkbox" name="days" value="Tue" /> Tue</label>
+              <label><input type="checkbox" name="days" value="Wed" /> Wed</label>
+              <label><input type="checkbox" name="days" value="Thu" /> Thu</label>
+              <label><input type="checkbox" name="days" value="Fri" /> Fri</label>
+              <label><input type="checkbox" name="days" value="Sat" /> Sat</label>
+              <label><input type="checkbox" name="days" value="Sun" /> Sun</label>
+            </div>
+          </div>
 
-
-          <div class="input-row">
-            <div class="field mini-select">
-              <label>Time</label>
+          <!-- Segundo row: Time, Seats, Fee -->
+          <div class="row g-3 justify-content-center">
+            <div class="field col-12 col-md-4 mini-select">
+              <label for="time">Time</label>
               <div class="select-wrapper make-time-arrow">
-                <select>
+                <select id="time" class="form-select">
+                  <option>8:00 am</option>
                   <option>10:00 am</option>
+                  <option>12:00 pm</option>
                 </select>
               </div>
             </div>
-            <div class="field mini-select">
-              <label>Seats</label>
+            <div class="field col-12 col-md-4 mini-select">
+              <label for="seats">Seats</label>
               <div class="select-wrapper double-arrow">
-                <select>
+                <select id="seats" class="form-select">
+                  <option>1</option>
                   <option>2</option>
+                  <option>3</option>
                 </select>
               </div>
             </div>
-            <div class="field mini-select">
-              <label>Fee</label>
+            <div class="field col-12 col-md-4 mini-select">
+              <label for="fee">Fee</label>
               <div class="select-wrapper double-arrow">
-                <select>
+                <select id="fee" class="form-select">
+                  <option>5</option>
+                  <option>10</option>
                   <option>15</option>
                 </select>
               </div>
@@ -90,49 +98,67 @@
 
           <label style="font-weight:bold; color:#555; margin-bottom: 10px; display: block;">Vehicle Details</label>
           <fieldset class="vehicle-box">
-            <div class="input-row">
-              <div class="field">
-                <label>Make</label>
+            <!-- Row vehicle details -->
+            <div class="row g-3 justify-content-center">
+              <div class="field col-12 col-md-4">
+                <label for="make">Make</label>
                 <div class="select-wrapper make-time-arrow">
-                  <select>
+                  <select id="make" class="form-select">
                     <option>Nissan</option>
+                    <option>Hyundai</option>
+                    <option>Toyota</option>
                   </select>
                 </div>
               </div>
-              <div class="field">
-                <label>Model</label>
-                <input type="text" placeholder="Pathfinder" />
+              <div class="field col-12 col-md-4">
+                <label for="model">Model</label>
+                <input type="text" id="model" placeholder="Pathfinder" class="form-control" />
               </div>
-              <div class="field mini-select">
-                <label>Year</label>
+              <div class="field col-12 col-md-4 mini-select">
+                <label for="year">Year</label>
                 <div class="select-wrapper double-arrow">
-                  <select>
+                  <select id="year" class="form-select">
                     <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
                   </select>
                 </div>
               </div>
             </div>
           </fieldset>
 
-          <div class="actions">
+          <div class="actions d-flex justify-content-between align-items-center mt-3">
             <a href="RidesR.html" class="cancel-link">Cancel</a>
-            <button type="button" class="btn-create" onclick="location.href='RidesR.html'">Save</button>
+           <button type="button" class="btn-save btn btn-primary">Save</button>
+
           </div>
         </form>
       </div>
     </main>
 
-    <footer class="footer">
-      <nav class="footer-nav">
-        <a href="SearchHome.html">Home</a> |
-        <a href="RidesR.html" class="active">Rides</a> |
-        <a href="Bookings.html">Bookings</a> |
-        <a href="Settings.html">Settings</a> |
-        <a href="index.html">Login</a> |
-        <a href="Register.html">Register</a>
-      </nav>
-      <p class="footer-copy">© Aventones.com</p>
-    </footer>
+<footer class="footer text-center mt-4">
+  <nav class="footer-nav mb-2">
+    <a href="SearchHome.html">Home</a> |
+    <span id="footer-rides-wrapper">
+      <a href="RidesR.html" id="footer-rides">Rides</a> |
+    </span>
+    <a href="Bookings.html" class="active">Bookings</a> |
+    <a href="Settings.html">Settings</a> |
+    <a href="index.html">Login</a> |
+    <a href="Register.html">Register</a>
+  </nav>
+  <p class="footer-copy">© Aventones.com</p>
+</footer>
+
+
   </div>
+
+  <script src="js/editRides.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

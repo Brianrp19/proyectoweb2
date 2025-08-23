@@ -1,6 +1,5 @@
 @import url('SearchHome.css');
 
-
 .title {
   font-size: 32px;
   font-weight: normal;
@@ -15,27 +14,17 @@
   border-top: 1px solid #aaa;
 }
 
-
-.rides-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 15px;
-  margin-bottom: 24px;
+.bookings-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .rides-table th,
 .rides-table td {
-  border: 1px solid #ccc;
-  padding: 20px 12px; 
+  padding: 20px 12px;
   text-align: center;
   vertical-align: middle;
 }
-
-.rides-table th {
-  background-color: #f4f4f4;
-  font-weight: bold;
-}
-
 
 .user-avatar {
   width: 48px;
@@ -45,15 +34,9 @@
   margin-right: 8px;
 }
 
-
-.link-accept {
-  color: #1a73e8;
-  text-decoration: none;
-  font-weight: bold;
-}
-
+.link-accept,
 .link-reject {
-  color: #1a73e8; 
+  color: #1a73e8;
   text-decoration: none;
   font-weight: bold;
 }
@@ -62,7 +45,6 @@
 .link-reject:hover {
   text-decoration: underline;
 }
-
 
 .footer {
   text-align: center;
@@ -95,54 +77,144 @@
 
 .user-dropdown {
   position: relative;
-  display: inline-block;
-  margin-left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  outline: none;
 }
 
-
-.user-dropdown label {
+.user-dropdown > label {
   cursor: pointer;
-  display: inline-block;
-  width: 60px;   
-  height: 40px;  
-  position: relative;
+  display: inline-flex;
 }
-
 
 .user-icon {
-  width: 60px;
+  width: 50px;
   height: 40px;
-  border-radius: 50%;
   object-fit: contain;
-  display: block;
 }
 
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 45px; 
+  top: 100%;
   right: 0;
   background-color: white;
   border: 1px solid #ccc;
-  min-width: 160px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 100;
-}
-
-.user-dropdown:hover .dropdown-menu,
-.user-dropdown:focus-within .dropdown-menu {
-  display: block;
+  border-radius: 4px;
+  min-width: 140px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  flex-direction: column;
 }
 
 .dropdown-menu a {
-  display: block;
-  padding: 10px;
+  padding: 10px 15px;
   text-decoration: none;
-  color: #000;
-  border-bottom: 1px solid #ccc;
-  font-size: 14px;
+  color: #333;
+  font-weight: normal;
+  display: block;
+  transition: background-color 0.2s ease;
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+  background-color: #1a73e8;
+  color: white;
+  outline: none;
+}
+
+.user-dropdown:focus-within .dropdown-menu {
+  display: flex;
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .rides-table th,
+  .rides-table td {
+    padding: 10px 6px;
+    font-size: 13px;
+  }
+
+  .search-user {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .user-icon {
+    width: 40px;
+    height: 30px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-bar a {
+    margin: 6px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .search-user {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .rides-table th,
+  .rides-table td {
+    font-size: 14px;
+    padding: 14px 10px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .rides-table {
+    font-size: 16px;
+  }
+
+  .search-bar {
+    width: 300px;
+  }
+}
+
+.rides-table thead tr {
   background-color: #f0f0f0;
+}
+
+.rides-table tbody tr {
+  background-color: #fff;
+}
+
+.rides-table tbody tr:hover {
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+.hidden-by-role {
+  display: none !important;
 }

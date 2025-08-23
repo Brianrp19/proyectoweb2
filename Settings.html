@@ -15,7 +15,7 @@
         <div class="header-content">
           <nav class="nav-bar">
             <a href="SearchHome.html" class="active">Home</a>
-            <a href="RidesR.html">Rides</a>
+            <a href="RidesR.html" id="nav-rides">Rides</a>
             <a href="Bookings.html">Bookings</a>
           </nav>
           <div class="search-user">
@@ -35,16 +35,15 @@
       </div>
     </header>
 
-
     <main class="container">
       <div class="content-body">
         <h2 class="title">Configuration</h2>
         <hr class="divider" />
 
-        <form class="config-form" action="SearchHome.html" method="GET">
+        <form class="config-form" novalidate>
           <div class="field">
             <label for="publicName">Public Name</label>
-            <input type="text" id="publicName" class="input-small" name="publicName" />
+            <input type="text" id="publicName" class="input-small" name="publicName" readonly />
           </div>
 
           <div class="field">
@@ -60,18 +59,22 @@
       </div>
     </main>
 
- 
-    <footer class="footer">
-      <nav class="footer-nav">
+    <footer class="footer text-center mt-4">
+      <nav class="footer-nav mb-2">
         <a href="SearchHome.html">Home</a> |
-        <a href="RidesR.html">Rides</a> |
-        <a href="Bookings.html">Bookings</a> |
-        <a href="Settings.html" class="active">Settings</a> |
+        <span id="footer-rides-wrapper">
+          <a href="RidesR.html" id="footer-rides">Rides</a> |
+        </span>
+        <a href="Bookings.html" class="active">Bookings</a> |
+        <a href="Settings.html">Settings</a> |
         <a href="index.html">Login</a> |
         <a href="Register.html">Register</a>
       </nav>
       <p class="footer-copy">© Aventones.com</p>
     </footer>
+
   </div>
+
+  <script src="js/settings.js"></script>
 </body>
 </html>

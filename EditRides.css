@@ -111,7 +111,7 @@ body {
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
- font-weight: normal;
+  font-weight: normal;
 }
 
 .ride-form {
@@ -220,12 +220,7 @@ body {
 }
 
 .select-wrapper.double-arrow {
-  background-image:
-    linear-gradient(to right,
-      transparent 70%,
-      #dcdcdc 70%,
-      #dcdcdc 71%,
-      #f0f0f0 71%);
+  background-image: linear-gradient(to right, transparent 70%, #dcdcdc 70%, #dcdcdc 71%, #f0f0f0 71%);
 }
 
 .select-wrapper.double-arrow::after {
@@ -269,18 +264,19 @@ body {
   font-weight: bold;
 }
 
-.btn-create {
+.btn-save {
   background-color: #1a73e8;
   color: white;
   padding: 10px 30px;
   font-size: 16px;
   border: none;
-  border-radius: 4px;
+  border-radius: 0!important;
   font-weight: bold;
   cursor: pointer;
+  width: 150px;
 }
 
-.btn-create:hover {
+.btn-save:hover {
   background-color: #0c64d3;
 }
 
@@ -313,8 +309,6 @@ body {
   font-size: 14px;
 }
 
-
-
 .user-dropdown {
   position: relative;
   display: inline-block;
@@ -340,7 +334,7 @@ body {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 45px; 
+  top: 45px;
   right: 0;
   background-color: white;
   border: 1px solid #ccc;
@@ -376,11 +370,12 @@ body {
   background-color: #f0f0f0;
   color: #000;
 }
+
 .days-section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 70px; 
+  margin-left: 70px;
   margin-bottom: 20px;
 }
 
@@ -395,4 +390,108 @@ body {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
+}
+
+@media (max-width: 390px) {
+  .header-content {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px 10px;
+  }
+
+  .nav-bar {
+    width: 100% !important;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .nav-bar a {
+    font-size: 14px;
+    line-height: normal;
+    flex: none !important;
+    padding: 6px 8px;
+  }
+
+  .search-user {
+    width: 100%;
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .search-bar {
+    width: 100% !important;
+    max-width: 220px;
+  }
+
+  .logo-header {
+    width: 180px !important;
+    margin-bottom: 15px;
+  }
+
+  .ride-wrapper {
+    padding: 20px 15px !important;
+  }
+
+  .input-row {
+    flex-direction: column !important;
+  }
+
+  .field {
+    min-width: 100% !important;
+  }
+
+  .days-section {
+    margin-left: 0 !important;
+  }
+
+  .days-checkbox {
+    justify-content: center !important;
+    gap: 20px !important;
+  }
+
+  .mini-select {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-content {
+    padding: 0 20px;
+  }
+
+  .nav-bar {
+    width: 60% !important;
+  }
+
+  .search-bar {
+    width: 180px !important;
+  }
+
+  .ride-wrapper {
+    padding: 30px 25px !important;
+  }
+
+  .input-row {
+    justify-content: space-between !important;
+  }
+
+  .field {
+    min-width: 45% !important;
+  }
+
+  .days-section {
+    margin-left: 40px !important;
+  }
+
+  .days-checkbox {
+    gap: 30px !important;
+  }
+}
+
+@media (min-width: 1025px) {
+}
+
+.hidden-by-role {
+  display: none !important;
 }

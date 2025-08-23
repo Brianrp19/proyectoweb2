@@ -4,30 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mis Aventones - Aventones</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="RidesR.css" />
 </head>
 <body>
-  <div class="wrapper">
-    <header class="main-header">
-      <img src="Imagenes/Logo.png" alt="Logo Aventones" class="logo-header" />
-      <div class="header-box">
-        <div class="header-content">
-          <nav class="nav-bar">
+  <div class="wrapper container-fluid px-3">
+    <header class="main-header text-center my-3">
+      <img src="Imagenes/Logo.png" alt="Logo Aventones" class="logo-header img-fluid" />
+      <div class="header-box mt-3">
+        <div class="header-content d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+          <nav class="nav-bar d-flex flex-column flex-sm-row align-items-center gap-3">
             <a href="SearchHome.html">Home</a>
-            <a href="RidesR.html" class="active">Rides</a>
+          <a href="RidesR.html" id="nav-rides" class="active">Rides</a>
             <a href="Bookings.html">Bookings</a>
           </nav>
-      
-          <div class="search-user user-dropdown" tabindex="0">
-            <input type="text" placeholder="Search..." class="search-bar" />
+          <div class="search-user user-dropdown d-flex align-items-center gap-2 mt-2 mt-md-0" tabindex="0">
+            <input type="text" placeholder="Search..." class="search-bar form-control form-control-sm" />
             <label tabindex="0">
               <img src="Imagenes/LogoPersona.png" alt="User Icon" class="user-icon" />
             </label>
             <div class="dropdown-menu">
-                <a href="index.html">Logout</a>
-                <a href="Profile.html">Profile</a>
-                <a href="Settings.html">Settings</a>
-              </div>
+              <a href="index.html">Logout</a>
+              <a href="Profile.html">Profile</a>
+              <a href="Settings.html">Settings</a>
+            </div>
           </div>
         </div>
       </div>
@@ -35,74 +35,50 @@
 
     <main class="container">
       <div class="content-body">
-        <h2 class="title">My rides</h2>
+        <h2 class="title text-center">My rides</h2>
         <hr class="divider" />
-
-        <div class="btn-container">
+        <div class="btn-container text-end mb-3">
           <a href="NewRide.html" class="btn-new-ride">New Ride</a>
         </div>
 
-        <table class="rides-table">
-          <thead>
-            <tr>
-              <th>From</th>
-              <th>To</th>
-              <th>Seats</th>
-              <th>Car</th>
-              <th>Fee</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="link-text">Quesada</td>
-              <td>Alajuela</td>
-              <td>2</td>
-              <td>Nissan Pathfinder 2015</td>
-              <td>$5</td>
-              <td>
-                <a href="EditRides.html?id=1" class="link-text">Edit</a> | 
-                <a href="#" class="link-text">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="link-text">Quesada</td>
-              <td>Naranjo</td>
-              <td>1</td>
-              <td>Toyota Corolla 2020</td>
-              <td>$10</td>
-              <td>
-                <a href="EditRides.html?id=2" class="link-text">Edit</a> | 
-                <a href="#" class="link-text">Delete</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="link-text">Aguas Zarcas</td>
-              <td>Naranjo</td>
-              <td>1</td>
-              <td>Ford Festiva 1990</td>
-              <td>-</td>
-              <td>
-                <a href="EditRides.html?id=3" class="link-text">Edit</a> | 
-                <a href="#" class="link-text">Delete</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table class="rides-table table table-bordered">
+            <thead>
+              <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Seats</th>
+                <th>Car</th>
+                <th>Fee</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="rides-body">
+              <!-- Los rides del usuario se insertan dinámicamente aquí -->
+            </tbody>
+          </table>
+        </div>
       </div>
     </main>
 
-    <footer class="footer">
-      <nav class="footer-nav">
-        <a href="SearchHome.html">Home</a> |
-        <a href="RidesR.html" class="active">Rides</a> |
-        <a href="Bookings.html">Bookings</a> |
-        <a href="Settings.html">Settings</a> |
-        <a href="index.html">Login</a> |
-        <a href="Register.html">Register</a>
-      </nav>
-      <p class="footer-copy">© Aventones.com</p>
-    </footer>
+<footer class="footer text-center mt-4">
+  <nav class="footer-nav mb-2">
+    <a href="SearchHome.html">Home</a> |
+    <span id="footer-rides-wrapper">
+      <a href="RidesR.html" id="footer-rides">Rides</a> |
+    </span>
+    <a href="Bookings.html" class="active">Bookings</a> |
+    <a href="Settings.html">Settings</a> |
+    <a href="index.html">Login</a> |
+    <a href="Register.html">Register</a>
+  </nav>
+  <p class="footer-copy">© Aventones.com</p>
+</footer>
+
+
   </div>
+
+  <!-- Script que carga los rides del usuario -->
+ <script src="js/rides.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ride Details - Aventones</title>
   <link rel="stylesheet" href="VerRide.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
   <div class="wrapper">
@@ -15,7 +16,7 @@
         <div class="header-content">
           <nav class="nav-bar">
             <a href="SearchHome.html">Home</a>
-            <a href="RidesR.html" class="active">Rides</a>
+            <a href="RidesR.html" id="nav-rides">Rides</a>
             <a href="Bookings.html">Bookings</a>
           </nav>
           <div class="search-user">
@@ -63,7 +64,7 @@
         <div class="input-row">
           <div class="field inline">
             <label>Time</label>
-            <select>
+            <select id="time-select">
               <option>8:00 am</option>
               <option selected>10:00 am</option>
               <option>12:00 pm</option>
@@ -71,7 +72,7 @@
           </div>
           <div class="field inline">
             <label>Seats</label>
-            <select>
+            <select id="seats-select">
               <option>1</option>
               <option selected>2</option>
               <option>3</option>
@@ -79,7 +80,7 @@
           </div>
           <div class="field inline">
             <label>Fee</label>
-            <select>
+            <select id="fee-select">
               <option>5</option>
               <option>10</option>
               <option selected>15</option>
@@ -92,7 +93,7 @@
           <div class="input-row">
             <div class="field inline">
               <label>Make</label>
-              <select>
+              <select id="make-select">
                 <option selected>Nissan</option>
                 <option>Hyundai</option>
                 <option>Toyota</option>
@@ -100,11 +101,11 @@
             </div>
             <div class="field inline">
               <label>Model</label>
-              <input type="text" value="March" />
+              <input type="text" id="model-input" value="March" />
             </div>
             <div class="field inline">
               <label>Year</label>
-              <select>
+              <select id="year-select">
                 <option>2020</option>
                 <option selected>2021</option>
                 <option>2022</option>
@@ -115,22 +116,27 @@
 
         <div class="actions">
           <a href="RidesR.html" class="cancel-link">Cancel</a>
-          <a href="SearchHome.html" class="btn-request">Request</a>
+          <button type="button" class="btn-request">Request</button>
         </div>
       </div>
     </main>
 
-    <footer class="footer">
-      <nav class="footer-nav">
-        <a href="SearchHome.html">Home</a> |
-        <a href="RidesR.html" class="active">Rides</a> |
-        <a href="Bookings.html">Bookings</a> |
-        <a href="Settings.html">Settings</a> |
-        <a href="index.html">Login</a> |
-        <a href="Register.html">Register</a>
-      </nav>
-      <p class="footer-copy">© Aventones.com</p>
-    </footer>
+<footer class="footer text-center mt-4">
+  <nav class="footer-nav mb-2">
+    <a href="SearchHome.html">Home</a> |
+    <span id="footer-rides-wrapper">
+      <a href="RidesR.html" id="footer-rides">Rides</a> |
+    </span>
+    <a href="Bookings.html" class="active">Bookings</a> |
+    <a href="Settings.html">Settings</a> |
+    <a href="index.html">Login</a> |
+    <a href="Register.html">Register</a>
+  </nav>
+  <p class="footer-copy">© Aventones.com</p>
+</footer>
+
+
   </div>
+  <script src="js/request.js"></script>
 </body>
 </html>

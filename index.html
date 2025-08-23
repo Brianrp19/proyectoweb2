@@ -4,46 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AVENTONES</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styleLg.css" />
 </head>
 <body>
-  <main class="container">
-    <div class="login-wrapper">
-      <img src="Imagenes/Logo.png" alt="Logo Aventones" />
+  <main class="container d-flex justify-content-center align-items-center min-vh-100 py-5">
+    <div class="login-wrapper shadow border border-primary rounded p-4 p-md-5 text-center d-flex flex-column align-items-center gap-3" style="width: 95vw; max-width: 1000px;">
+      <img src="Imagenes/Logo.png" alt="Logo Aventones" class="img-fluid" style="max-width: 300px; width: 40%;" />
+      <img src="Imagenes/LogoGoogle.png" alt="Google logo" class="img-fluid" style="max-width: 200px;" />
 
-      <img src="Imagenes/LogoGoogle.png" alt="Google logo" />
+      <p class="separator-text fs-6 fw-semibold text-secondary my-3">O</p>
 
-      <p class="separator-text">Or</p>
-
-      <form class="formulario-login" action="SearchHome.html" method="GET">
-        <div class="campo">
-          <label for="username">Username</label>
-          <input type="text" id="username" name="username" class="input-field" required />
+      <form id="loginForm" class="formulario-login" style="max-width: 300px; margin: 0 auto;">
+        <div class="campo mb-3 d-flex flex-column text-start">
+          <label for="email" class="form-label fw-bold text-dark">Email</label>
+          <input type="email" id="email" name="email" class="form-control input-field" required />
         </div>
 
-        <div class="campo">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" class="input-field" required />
+        <div class="campo mb-3 d-flex flex-column text-start">
+          <label for="password" class="form-label fw-bold text-dark">Password</label>
+          <input type="password" id="password" name="password" class="form-control input-field" required />
         </div>
 
-        <p class="register-text">Not an user? <a href="Register.html">Register Now</a></p>
+       <p class="register-text">Not an user? <a href="Register.html">Register Now</a></p>
+       <p class="register-text">Not a driver? <a href="Driver.html">Register Now</a></p>
 
-        <button type="submit" class="login-btn">Login</button>
+        <button type="submit" class="login-btn btn btn-primary w-100 mx-auto" style="max-width: 90px;">Login</button>
       </form>
     </div>
   </main>
 
-  <footer class="footer">
-    <hr />
-    <nav class="footer-nav">
-      <a href="SearchHome.html">Home</a> |
-      <a href="RidesR.html">Rides</a> |
-      <a href="Bookings.html">Bookings</a> |
-      <a href="Settings.html">Settings</a> |
-      <a href="index.html" class="active">Login</a> |
-      <a href="Register.html">Register</a>
-    </nav>
-    <p class="footer-copy">© Aventones.com</p>
-  </footer>
+<footer class="footer text-center mt-4">
+  <nav class="footer-nav mb-2">
+    <a href="SearchHome.html">Home</a> |
+    <span id="footer-rides-wrapper">
+      <a href="RidesR.html" id="footer-rides">Rides</a> |
+    </span>
+    <a href="Bookings.html" class="active">Bookings</a> |
+    <a href="Settings.html">Settings</a> |
+    <a href="index.html">Login</a> |
+    <a href="Register.html">Register</a>
+  </nav>
+  <p class="footer-copy">© Aventones.com</p>
+</footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script type="module" src="js/auth.js"></script>
 </body>
 </html>
